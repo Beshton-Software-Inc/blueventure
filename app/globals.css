@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 via-electric-500 to-teal-500 bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle at 50% 50%, var(--tw-gradient-stops));
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+}
+
+/* Custom animations */
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animate-delay-800 {
+  animation-delay: 800ms;
+}
+
+/* Dot grid background */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(0, 86, 224, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient mesh effect */
+.gradient-mesh {
+  background:
+    radial-gradient(at 0% 0%, rgba(0, 86, 224, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 212, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(6, 220, 197, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 86, 224, 0.15) 0px, transparent 50%);
+}
