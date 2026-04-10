@@ -21,9 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div id="global-header" className="fixed top-0 left-0 right-0 z-50">
+          <div id="global-announcement" className="bg-[#0F2B5B] text-white text-center text-sm py-2.5 px-4">
+            <a href="/ai-workshop-spring-2026" className="hover:underline">
+              <span className="mr-1">🗓</span> Spring 2026 AI Workshop Series — 4 Saturdays starting April 18 <span className="ml-1 font-medium">→ Learn More</span>
+            </a>
+          </div>
+          <div id="global-nav"><Navbar /></div>
+        </div>
+        <main className="pt-[40px]">{children}</main>
+        <div id="global-footer"><Footer /></div>
       </body>
     </html>
   );

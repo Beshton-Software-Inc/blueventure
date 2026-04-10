@@ -45,20 +45,12 @@ export default function Contact() {
                 How do I join a program?
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Visit our Programs page to see what's available, then express
-                your interest through the Get Involved page or contact us
-                directly. We'll notify you when enrollment opens.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="font-display font-bold text-xl mb-2 text-primary-700">
-                Are programs free?
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Most of our programs are free or low-cost thanks to our
-                sponsors. We believe financial barriers should never prevent
-                motivated students from accessing quality AI education.
+                Check out our{" "}
+                <a href="/ai-workshop-spring-2026" className="text-primary-600 underline hover:text-primary-700">
+                  Spring 2026 AI Workshop Series
+                </a>{" "}
+                — our current flagship program. You can register your interest
+                directly on that page, or contact us here for any questions.
               </p>
             </div>
 
@@ -79,13 +71,14 @@ export default function Contact() {
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 We'd love to discuss partnership opportunities! Use this contact
-                form or email us at hello@blueventurehacks.org with "Partnership
+                form or email us at blue9ventures@gmail.com with "Partnership
                 Inquiry" in the subject line.
               </p>
             </div>
           </div>
         </div>
       </Section>
+
     </>
   );
 }

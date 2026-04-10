@@ -116,7 +116,7 @@ Works on any platform that supports Next.js:
 
 Before going live, customize these:
 
-- [ ] Update email address in Footer.tsx (`hello@blueventurehacks.org`)
+- [ ] Update email address in Footer.tsx (`blue9ventures@gmail.com`)
 - [ ] Add real social media links (currently placeholders)
 - [ ] Review all page content for accuracy
 - [ ] Test all forms work correctly

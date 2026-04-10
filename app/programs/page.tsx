@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
-import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Programs | Blue Venture Hacks",
@@ -120,7 +119,7 @@ export default function Programs() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-50 via-white to-electric-50 overflow-hidden">
+      <section className="relative pt-32 pb-12 bg-gradient-to-br from-primary-50 via-white to-electric-50 overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-40"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
@@ -133,9 +132,48 @@ export default function Programs() {
         </div>
       </section>
 
+      {/* Featured: Upcoming Workshop */}
+      <Section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-l-4 border-primary-600 bg-primary-50 rounded-r-lg p-8 md:p-10">
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-primary-600 mb-3">
+              Upcoming Program
+            </span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-primary-700 mb-3">
+              Build With AI — Hands-On Workshop Series
+            </h2>
+            <p className="text-gray-600 mb-2">
+              4 Saturdays &middot; April–May 2026 &middot; Mountain View + Online &middot; $3,000
+            </p>
+            <p className="text-gray-600 mb-6 max-w-3xl">
+              Build applications, automate workflows, and launch your own project.
+              No coding experience required.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/ai-workshop-spring-2026#register"
+
+                className="inline-block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+              >
+                Register Now
+              </a>
+              <a
+                href="/ai-workshop-spring-2026"
+                className="inline-block text-center text-primary-600 font-semibold px-6 py-3 hover:underline"
+              >
+                View Full Details →
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Programs Grid */}
       <Section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-500 mb-12">
+            More Programs Coming Soon
+          </h2>
           <div className="space-y-16">
             {programs.map((program, index) => (
               <div
@@ -255,9 +293,8 @@ export default function Programs() {
             while others require application.
           </p>
           <p className="text-lg text-gray-600 mb-12 leading-relaxed">
-            Most programs are free or low-cost thanks to our sponsors and
-            supporters. We believe financial barriers should never prevent
-            motivated students from accessing quality AI education.
+            Programs are offered throughout the year. Check out our current
+            workshop or contact us to learn about upcoming offerings.
           </p>
 
           <div className="bg-gradient-to-br from-primary-700 to-electric-600 text-white p-10 rounded-3xl shadow-2xl">
@@ -267,22 +304,24 @@ export default function Programs() {
             <p className="text-primary-100 mb-6">
               Express your interest and we'll notify you when enrollment opens.
             </p>
-            <a
-              href="/get-involved"
-              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold hover:bg-primary-50 transition-colors"
-            >
-              Express Interest
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/ai-workshop-spring-2026#register"
+                className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold hover:bg-primary-50 transition-colors"
+              >
+                Register Now
+              </a>
+              <a
+                href="/contact"
+                className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary-700 transition-colors"
+              >
+                Get in Contact
+              </a>
+            </div>
           </div>
         </div>
       </Section>
 
-      {/* CTA */}
-      <CTABanner
-        title="Start Your AI Learning Journey"
-        primaryButton={{ text: "Get Involved", href: "/get-involved" }}
-        secondaryButton={{ text: "View Hackathons", href: "/hackathons" }}
-      />
     </>
   );
 }

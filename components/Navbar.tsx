@@ -7,7 +7,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Programs", href: "/programs" },
   { name: "Hackathons", href: "/hackathons" },
-  { name: "OPC", href: "/opc" },
+  { name: "OPC", href: "/one-person-company" },
   { name: "Get Involved", href: "/get-involved" },
   { name: "Contact", href: "/contact" },
 ];
@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-lg shadow-lg"
           : "bg-transparent"
@@ -57,7 +57,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/get-involved"
+              href="/ai-workshop-spring-2026#register"
               className="bg-gradient-to-r from-primary-600 to-electric-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Join Us
@@ -119,7 +119,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/get-involved"
+              href="/ai-workshop-spring-2026#register"
               className="block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-4 py-3 rounded-lg font-semibold"
               onClick={() => setMobileMenuOpen(false)}
             >

@@ -162,7 +162,7 @@ If you have a custom domain like `blueventurehacks.org`:
 
 Before announcing your site:
 
-- [ ] Update "hello@blueventurehacks.org" email
+- [ ] Update "blue9ventures@gmail.com" email
 - [ ] Add real social media links (if available)
 - [ ] Replace placeholder content with real info
 - [ ] Add real statistics (if different from placeholders)

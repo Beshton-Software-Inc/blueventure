@@ -323,7 +323,7 @@ Suggested intro:
 **We’d love to hear from you. Whether you’re a student, mentor, sponsor, or school partner, let’s connect.**
 
 Use placeholder contact info for now:
-- hello@blueventurehacks.org
+- blue9ventures@gmail.com
 
 ---
 

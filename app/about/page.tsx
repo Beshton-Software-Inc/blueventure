@@ -51,7 +51,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-50 via-white to-electric-50 overflow-hidden">
+      <section className="relative pt-32 pb-12 bg-gradient-to-br from-primary-50 via-white to-electric-50 overflow-hidden">
         <div className="absolute inset-0 dot-pattern opacity-40"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">

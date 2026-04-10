@@ -29,13 +29,6 @@ const features = [
   },
 ];
 
-const stats = [
-  { value: "500+", label: "Students Served" },
-  { value: "50+", label: "Workshops Hosted" },
-  { value: "200+", label: "Hackathon Participants" },
-  { value: "30+", label: "Startup Ideas Launched" },
-];
-
 export default function Home() {
   return (
     <>
@@ -71,7 +64,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
-                  href="/programs"
+                  href="/ai-workshop-spring-2026"
                   className="inline-block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   Join a Program
@@ -100,26 +93,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <Section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="text-center animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-4xl md:text-5xl font-display font-bold text-gradient mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
 
       {/* Why This Matters Now */}
       <Section gradient className="bg-primary-50">
@@ -277,8 +250,8 @@ export default function Home() {
       {/* Final CTA */}
       <CTABanner
         title="Ready to Build Your Future With AI?"
-        description="Join thousands of students and young professionals taking control of their careers in the age of AI."
-        primaryButton={{ text: "Get Started Today", href: "/get-involved" }}
+        description="Learn practical AI skills, build real projects, and take control of your career in the age of AI."
+        primaryButton={{ text: "Get Started Today", href: "/ai-workshop-spring-2026#register" }}
         secondaryButton={{ text: "Learn More", href: "/about" }}
       />
     </>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
-import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "Hackathons | Blue Venture Hacks",
@@ -59,6 +58,7 @@ const buildExamples = [
 export default function Hackathons() {
   return (
     <>
+      <style>{`#global-nav nav { background: rgba(255,255,255,0.9) !important; backdrop-filter: blur(16px); }`}</style>
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-primary-700 via-electric-600 to-teal-600">
         <div className="absolute inset-0">
@@ -73,16 +73,10 @@ export default function Hackathons() {
           <h1 className="font-display font-bold text-5xl md:text-7xl mb-6">
             Hackathons That Matter
           </h1>
-          <p className="text-xl md:text-2xl text-primary-100 leading-relaxed max-w-3xl mx-auto mb-10">
+          <p className="text-xl md:text-2xl text-primary-100 leading-relaxed max-w-3xl mx-auto">
             Test your ideas, build AI-powered solutions, and learn startup
             thinking in collaborative innovation challenges.
           </p>
-          <a
-            href="#apply"
-            className="inline-block bg-white text-primary-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-2xl"
-          >
-            Join the Next Hackathon
-          </a>
         </div>
       </section>
 
@@ -307,28 +301,29 @@ export default function Hackathons() {
       <Section id="apply" className="bg-gradient-to-br from-primary-700 via-electric-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-            Join Our Next Hackathon
+            Stay in the Loop
           </h2>
           <p className="text-xl text-primary-100 mb-10 leading-relaxed">
-            Hackathons happen throughout the year. Sign up to get notified about
-            upcoming events and be the first to register.
+            Interested in future hackathons? Drop us a line and we&apos;ll let
+            you know when the next one is announced.
           </p>
-          <a
-            href="/get-involved"
-            className="inline-block bg-white text-primary-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-2xl"
-          >
-            Express Interest
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-primary-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-2xl"
+            >
+              Get in Touch
+            </a>
+            <a
+              href="/ai-workshop-spring-2026"
+              className="inline-block border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-700 transition-all duration-300"
+            >
+              View Workshop
+            </a>
+          </div>
         </div>
       </Section>
 
-      {/* CTA */}
-      <CTABanner
-        title="Ready to Build Something Amazing?"
-        primaryButton={{ text: "Get Involved", href: "/get-involved" }}
-        secondaryButton={{ text: "Explore OPC Track", href: "/opc" }}
-        gradient={false}
-      />
     </>
   );
 }
