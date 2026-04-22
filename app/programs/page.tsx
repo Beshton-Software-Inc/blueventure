@@ -143,7 +143,7 @@ export default function Programs() {
               Build With AI — Hands-On Workshop Series
             </h2>
             <p className="text-gray-600 mb-2">
-              4 Saturdays &middot; April–May 2026 &middot; Mountain View + Online &middot; $3,000
+              4 Sundays &middot; May 2026 &middot; Mountain View + Online &middot; $400
             </p>
             <p className="text-gray-600 mb-6 max-w-3xl">
               Build applications, automate workflows, and launch your own project.

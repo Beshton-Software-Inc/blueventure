@@ -14,13 +14,13 @@ import {
 export const metadata: Metadata = {
   title: "Spring 2026 AI Workshop Series | Blue Venture Hacks",
   description:
-    "Four Saturdays. Real tools. Build applications, automate workflows, and launch your own project. A hands-on AI workshop series by Blue Venture Hacks.",
+    "Four Sundays. Real tools. Build applications, automate workflows, and launch your own project. A hands-on AI workshop series by Blue Venture Hacks.",
 };
 
 const sessions = [
   {
     week: 1,
-    date: "April 18",
+    date: "May 3",
     title: "Vibe Coding with Claude",
     icon: Code,
     description:
@@ -28,7 +28,7 @@ const sessions = [
   },
   {
     week: 2,
-    date: "April 25",
+    date: "May 10",
     title: "AI Workflow Automation",
     icon: Workflow,
     description:
@@ -36,7 +36,7 @@ const sessions = [
   },
   {
     week: 3,
-    date: "May 2",
+    date: "May 17",
     title: "Gaming & Digital Worlds",
     icon: Gamepad2,
     description:
@@ -44,7 +44,7 @@ const sessions = [
   },
   {
     week: 4,
-    date: "May 9",
+    date: "May 24",
     title: "Launch Your One-Person Company",
     icon: Rocket,
     description:
@@ -55,8 +55,8 @@ const sessions = [
 const logistics = [
   {
     icon: Calendar,
-    title: "4 Saturdays",
-    detail: "April 18, April 25, May 2, May 9",
+    title: "4 Sundays",
+    detail: "May 3, May 10, May 17, May 24",
   },
   {
     icon: MapPin,
@@ -65,7 +65,7 @@ const logistics = [
   },
   {
     icon: DollarSign,
-    title: "$3,000",
+    title: "$400",
     detail: "Full program. Includes all materials and project support.",
   },
 ];
@@ -85,7 +85,7 @@ export default function ProgramV2() {
             Build With AI — Hands-On Workshop Series
           </h1>
           <p className="text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto mb-8">
-            Four Saturdays. Real tools. Build applications, automate workflows,
+            Four Sundays. Real tools. Build applications, automate workflows,
             and launch your own project — no coding experience required.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">

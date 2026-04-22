@@ -5,14 +5,14 @@ import { lumaLinks } from "@/lib/links";
 export const metadata: Metadata = {
   title: "Hands-On AI Workshop | Blue Venture Hacks",
   description:
-    "A 1-month intensive workshop across 4 weekend sessions. Learn Claude Code, automation with OpenClaw, AI gaming, and how to launch your own One-Person Company.",
+    "A 1-month intensive workshop across 4 Sunday sessions. Learn Claude Code, automation with OpenClaw, AI gaming, and how to launch your own One-Person Company.",
 };
 
 const sessions = [
   {
     id: "claude-code",
     week: 1,
-    date: "April 18",
+    date: "May 3",
     title: "Claude Code & Vibe Coding",
     tagline: "Learn to code with AI — build apps, websites, services, and agents",
     icon: "💻",
@@ -43,7 +43,7 @@ const sessions = [
   {
     id: "automation",
     week: 2,
-    date: "April 25",
+    date: "May 10",
     title: "OpenClaw & NemoClaw",
     tagline: "Automate tasks and build powerful AI workflows",
     icon: "🤖",
@@ -78,7 +78,7 @@ const sessions = [
   {
     id: "gaming",
     week: 3,
-    date: "May 2",
+    date: "May 17",
     title: "Gaming & Digital Worlds",
     tagline: "Build games, avatars, and digital twins with AI",
     icon: "🎮",
@@ -105,7 +105,7 @@ const sessions = [
   {
     id: "opc",
     week: 4,
-    date: "May 9",
+    date: "May 24",
     title: "Launch Your Own OPC",
     tagline: "Use AI to build and run a One-Person Company",
     icon: "🚀",
@@ -136,9 +136,9 @@ const sessions = [
 ];
 
 const highlights = [
-  { label: "Duration", value: "1 Month", detail: "4 weekend day sessions" },
+  { label: "Duration", value: "1 Month", detail: "4 Sunday sessions" },
   { label: "Format", value: "Hands-On", detail: "Build real projects each session" },
-  { label: "Tuition", value: "$3,000", detail: "All materials included" },
+  { label: "Tuition", value: "$400", detail: "All materials included" },
   { label: "Class Size", value: "< 10", detail: "Personalized attention" },
 ];
 
@@ -162,7 +162,7 @@ export default function ProgramsV2() {
             <span className="text-gradient">One Month</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            Four intensive weekend sessions over one month. Go from zero to
+            Four intensive Sunday sessions over one month. Go from zero to
             building apps, automating workflows, creating games, and launching
             your own AI-powered company.
           </p>
@@ -214,7 +214,7 @@ export default function ProgramsV2() {
               The <span className="text-gradient">Curriculum</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Each weekend is a standalone deep-dive. By the end, you'll have
+              Each Sunday is a standalone deep-dive. By the end, you'll have
               built real projects across four disciplines.
             </p>
           </div>
@@ -362,11 +362,11 @@ export default function ProgramsV2() {
               </div>
               <div className="flex items-baseline justify-center gap-2 mb-2">
                 <span className="text-6xl md:text-7xl font-display font-bold">
-                  $3,000
+                  $400
                 </span>
               </div>
               <p className="text-primary-200 mb-8">
-                1 month &middot; 4 weekend sessions &middot; all materials included
+                1 month &middot; 4 Sunday sessions &middot; all materials included
               </p>
 
               <ul className="text-left max-w-sm mx-auto space-y-3 mb-10">
@@ -436,7 +436,7 @@ export default function ProgramsV2() {
                 Register
               </div>
               <div className="text-sm font-semibold text-electric-400 uppercase tracking-wide mb-2">
-                $1,000 / session
+                $100 / session
               </div>
               <h3 className="font-display font-bold text-2xl mb-1">
                 Sessions
