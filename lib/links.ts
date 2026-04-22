@@ -1,18 +1,12 @@
-// ============================================================
-// LUMA EVENT LINKS — Update these once events are created
 // All registration CTAs across the site pull from here.
-// ============================================================
-
-const PLACEHOLDER = "https://forms.gle/R1qQQYsC9VQMGrey6";
 
 export const lumaLinks = {
-  openHouse: PLACEHOLDER,
-  fullProgram: PLACEHOLDER,
-  week1: PLACEHOLDER,
-  week2: PLACEHOLDER,
-  week3: PLACEHOLDER,
-  week4: PLACEHOLDER,
+  openHouse: "https://luma.com/2myqi6dc",
+  week1: "https://luma.com/255qgebw",
+  week2: "https://luma.com/4we72djf",
+  week3: "https://luma.com/33yqo6do",
+  week4: "https://luma.com/o3gzlmuz",
 } as const;
 
 // Default CTA link used by buttons that say "Register" generically
-export const defaultRegisterLink = lumaLinks.fullProgram;
+export const defaultRegisterLink = lumaLinks.week1;

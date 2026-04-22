@@ -409,7 +409,7 @@ export default function ProgramsV2() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {/* Open House */}
             <div className="bg-white/10 border border-white/20 rounded-lg p-6 text-center">
               <div className="text-sm font-semibold text-teal-300 uppercase tracking-wide mb-2">
@@ -430,38 +430,16 @@ export default function ProgramsV2() {
               </a>
             </div>
 
-            {/* Full Program */}
+            {/* Individual Sessions */}
             <div className="bg-white/15 border-2 border-white/30 rounded-lg p-6 text-center relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-electric-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                Best Value
+                Register
               </div>
               <div className="text-sm font-semibold text-electric-400 uppercase tracking-wide mb-2">
-                $3,000
-              </div>
-              <h3 className="font-display font-bold text-2xl mb-1">
-                Full Program
-              </h3>
-              <p className="text-primary-200 text-sm mb-6">
-                All 4 sessions. The complete experience from coding to launching
-                your own company.
-              </p>
-              <a
-                href={lumaLinks.fullProgram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full bg-white text-primary-700 px-6 py-3 rounded-lg font-bold hover:bg-primary-50 transition-colors"
-              >
-                Register &rarr;
-              </a>
-            </div>
-
-            {/* Individual Sessions */}
-            <div className="bg-white/10 border border-white/20 rounded-lg p-6 text-center">
-              <div className="text-sm font-semibold text-primary-300 uppercase tracking-wide mb-2">
                 $1,000 / session
               </div>
               <h3 className="font-display font-bold text-2xl mb-1">
-                Individual Sessions
+                Sessions
               </h3>
               <p className="text-primary-200 text-sm mb-4">
                 Pick the sessions that interest you most.
