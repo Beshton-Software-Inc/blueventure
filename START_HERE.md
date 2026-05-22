@@ -180,7 +180,7 @@ vercel --prod            # Deploy to production
 - [ ] Google Sheets set up for forms
 - [ ] Environment variable ready
 - [ ] Content reviewed for accuracy
-- [ ] Email address updated (hello@blueventurehacks.org)
+- [ ] Email address updated (blue9ventures@gmail.com)
 
 ### Optional
 - [ ] Custom domain purchased

@@ -133,10 +133,10 @@ export default function ContactForm() {
                 Email Us
               </h3>
               <a
-                href="mailto:hello@blueventurehacks.org"
+                href="mailto:blue9ventures@gmail.com"
                 className="text-gray-600 hover:text-primary-600 transition-colors"
               >
-                hello@blueventurehacks.org
+                blue9ventures@gmail.com
               </a>
             </div>
           </div>

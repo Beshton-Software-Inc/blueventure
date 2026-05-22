@@ -160,7 +160,7 @@ Build the project and deploy the `.next` directory along with `public`, `package
 
 ## Contributing
 
-This is a nonprofit project. If you'd like to contribute improvements, please reach out to hello@blueventurehacks.org.
+This is a nonprofit project. If you'd like to contribute improvements, please reach out to blue9ventures@gmail.com.
 
 ## License
 
@@ -168,7 +168,7 @@ This is a nonprofit project. If you'd like to contribute improvements, please re
 
 ## Contact
 
-- Email: hello@blueventurehacks.org
+- Email: blue9ventures@gmail.com
 - Website: [Blue Venture Hacks](http://localhost:3000)
 
 ---

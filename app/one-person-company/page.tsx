@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Section from "@/components/Section";
-import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "One Person Company | Blue Venture Hacks",
@@ -77,19 +76,20 @@ const supportAreas = [
 export default function OPC() {
   return (
     <>
+      <style>{`#global-nav nav { background: rgba(255,255,255,0.9) !important; backdrop-filter: blur(16px); }`}</style>
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-primary-700 via-electric-600 to-teal-600">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-700 via-electric-600 to-teal-600">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full filter blur-3xl animate-float"></div>
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="max-w-4xl">
             <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-semibold mb-6">
               Entrepreneurship • AI • Innovation
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-7xl text-white mb-6 leading-tight">
+            <h1 className="font-display font-bold text-5xl md:text-6xl text-white mb-6 leading-tight">
               Build Your One-Person Company With AI
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 leading-relaxed mb-10">
@@ -388,20 +388,26 @@ export default function OPC() {
             You don't need venture capital. You don't need a co-founder. You
             don't need years of experience.
           </p>
-          <p className="text-2xl font-semibold text-white leading-relaxed">
+          <p className="text-2xl font-semibold text-white leading-relaxed mb-10">
             You just need an idea, the willingness to learn, and the courage to
             build.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/ai-workshop-spring-2026"
+              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 transition-colors"
+            >
+              View Workshop
+            </a>
+            <a
+              href="/contact"
+              className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-700 transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </Section>
-
-      {/* CTA */}
-      <CTABanner
-        title="Ready to Launch Your One-Person Company?"
-        description="Join our incubation program and get the support you need to turn your idea into reality."
-        primaryButton={{ text: "Apply Now", href: "/get-involved" }}
-        secondaryButton={{ text: "Join a Hackathon", href: "/hackathons" }}
-      />
     </>
   );
 }

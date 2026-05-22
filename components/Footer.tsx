@@ -5,7 +5,7 @@ const navigation = {
     { name: "About", href: "/about" },
     { name: "Programs", href: "/programs" },
     { name: "Hackathons", href: "/hackathons" },
-    { name: "OPC", href: "/opc" },
+    { name: "OPC", href: "/one-person-company" },
     { name: "Get Involved", href: "/get-involved" },
     { name: "Contact", href: "/contact" },
   ],
@@ -43,10 +43,10 @@ export default function Footer() {
               practical education, community, and entrepreneurship.
             </p>
             <a
-              href="mailto:hello@blueventurehacks.org"
+              href="mailto:blue9ventures@gmail.com"
               className="text-electric-400 hover:text-electric-300 transition-colors"
             >
-              hello@blueventurehacks.org
+              blue9ventures@gmail.com
             </a>
           </div>
 
@@ -109,20 +109,6 @@ export default function Footer() {
               © {new Date().getFullYear()} Blue Venture Hacks. A nonprofit
               organization dedicated to AI education and youth empowerment.
             </p>
-            <div className="flex space-x-6">
-              <Link
-                href="/privacy"
-                className="text-primary-300 hover:text-white text-sm transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-primary-300 hover:text-white text-sm transition-colors"
-              >
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>

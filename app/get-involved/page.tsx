@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Section from "@/components/Section";
-import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Get Involved | Blue Venture Hacks",
@@ -241,7 +240,7 @@ export default function GetInvolved() {
         </div>
       </Section>
 
-      {/* Newsletter Signup */}
+      {/* Stay Connected */}
       <Section className="bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-primary-700 via-electric-600 to-teal-600 rounded-3xl p-12 text-center text-white shadow-2xl">
@@ -251,27 +250,13 @@ export default function GetInvolved() {
             <p className="text-xl text-primary-100 mb-8">
               Get updates on upcoming programs, events, and opportunities.
             </p>
-            <NewsletterForm />
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 transition-colors"
+            >
+              Contact Us
+            </Link>
           </div>
-        </div>
-      </Section>
-
-      {/* Final CTA */}
-      <Section className="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-            Questions?
-          </h2>
-          <p className="text-xl text-primary-100 mb-10 leading-relaxed">
-            We'd love to hear from you. Whether you're a student, mentor,
-            sponsor, or school partner, let's connect.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-primary-700 px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-2xl"
-          >
-            Contact Us
-          </Link>
         </div>
       </Section>
     </>
