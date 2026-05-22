@@ -6,6 +6,10 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Blue Venture Hacks | AI Skills for the Next Generation",
   description: "Blue Venture Hacks is a nonprofit helping students and young professionals build AI skills, join workshops and hackathons, and launch one-person company ideas.",
+  icons: {
+    icon: '/icon.svg',
+    apple: '/apple-icon.svg',
+  },
   openGraph: {
     title: "Blue Venture Hacks | AI Skills for the Next Generation",
     description: "Blue Venture Hacks is a nonprofit helping students and young professionals build AI skills, join workshops and hackathons, and launch one-person company ideas.",
