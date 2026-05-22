@@ -2,37 +2,71 @@ import Link from "next/link";
 import Section from "@/components/Section";
 import CTABanner from "@/components/CTABanner";
 
-const features = [
+const summerHighlights = [
   {
-    title: "Learn AI Skills",
-    description:
-      "Master practical AI tools and techniques through hands-on workshops and training programs.",
-    icon: "🎓",
+    title: "Week #1",
+    subtitle: "Foundations & Setup",
+    points: [
+      "Introduction to AI tools",
+      "Product thinking & ideation",
+      "Market research basics",
+      "Team formation",
+      "Project selection"
+    ],
+    icon: "🖥️",
   },
   {
-    title: "Join Workshops & Summer Programs",
-    description:
-      "Participate in intensive learning experiences that build real-world capabilities.",
+    title: "Week #2",
+    subtitle: "Build & Iterate",
+    points: [
+      "Hands-on development with cutting-edge AI",
+      "Rapid prototyping",
+      "User feedback loops",
+      "Technical mentorship",
+      "Product refinement"
+    ],
+    icon: "⚙️",
+  },
+  {
+    title: "Week #3",
+    subtitle: "Launch & Present",
+    points: [
+      "Final product polish",
+      "Pitch preparation",
+      "Demo day presentation",
+      "Real company creation",
+      "Portfolio building"
+    ],
     icon: "🚀",
   },
-  {
-    title: "Build Through Hackathons",
-    description:
-      "Test your ideas, prototype solutions, and learn from peers in collaborative competitions.",
-    icon: "💡",
-  },
-  {
-    title: "Launch an OPC Idea",
-    description:
-      "Create a one-person company powered by AI tools and entrepreneurial thinking.",
-    icon: "🌟",
-  },
+];
+
+const summerSessions = [
+  { session: "Session #1", dates: "June 15 - July 3" },
+  { session: "Session #2", dates: "July 6 - July 24" },
+  { session: "Session #3", dates: "July 20 - August 7" },
+];
+
+const whyJoin = [
+  "Build a real company you own",
+  "Master cutting-edge AI tools",
+  "Create a standout college application story",
+  "Get hands-on mentorship from industry experts",
+  "Launch a portfolio-worthy product",
+  "Network with ambitious peers"
+];
+
+const stats = [
+  { value: "500+", label: "Students Served" },
+  { value: "50+", label: "Workshops Hosted" },
+  { value: "200+", label: "Hackathon Participants" },
+  { value: "30+", label: "Startup Ideas Launched" },
 ];
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section - Summer Programs */}
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-electric-50">
         {/* Decorative background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -42,216 +76,188 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left content */}
-            <div className="space-y-8 animate-fade-in">
-              <div className="inline-block">
-                <span className="bg-gradient-to-r from-primary-600 to-electric-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Nonprofit • AI Education • Youth Empowerment
-                </span>
-              </div>
-
-              <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-tight">
-                Prepare the Next Generation to{" "}
-                <span className="text-gradient">Thrive With AI</span>
-              </h1>
-
-              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Blue Venture Hacks is a nonprofit helping students and young
-                professionals build practical AI skills, launch projects, join
-                hackathons, and create one-person company opportunities.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link
-                  href="/ai-workshop-spring-2026"
-                  className="inline-block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-                >
-                  Join a Program
-                </Link>
-                <Link
-                  href="/get-involved"
-                  className="inline-block text-center border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
-                >
-                  Partner With Us
-                </Link>
-              </div>
+          <div className="text-center space-y-8 animate-fade-in">
+            <div className="inline-block">
+              <span className="bg-gradient-to-r from-primary-600 to-electric-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                Summer 2026 • AI & Software Engineering Camp
+              </span>
             </div>
 
-            {/* Right visual element */}
-            <div className="relative h-[500px] animate-fade-in animate-delay-400">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-electric-500 to-teal-500 rounded-3xl transform rotate-3 opacity-20"></div>
-              <div className="absolute inset-4 bg-gradient-to-br from-primary-600 via-electric-600 to-teal-600 rounded-3xl shadow-2xl flex items-center justify-center">
-                <div className="text-center text-white p-12">
-                  <div className="text-7xl mb-6">🚀</div>
-                  <p className="text-2xl font-display font-bold">
-                    Turn AI Disruption Into Opportunity
-                  </p>
+            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
+              🚀 WHAT TO DO THIS SUMMER?
+            </h1>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border-2 border-primary-200">
+                <h2 className="text-3xl font-bold text-primary-700 mb-4">You'll leave with a company</h2>
+                <p className="text-xl text-gray-700 mb-2">not just a certificate.</p>
+                <div className="space-y-2 text-lg text-gray-600">
+                  <p className="font-semibold">Built by you.</p>
+                  <p className="font-semibold">Owned by you.</p>
+                  <p className="font-semibold text-primary-600">The story every college app is missing.</p>
                 </div>
               </div>
+
+              <div className="bg-gradient-to-r from-primary-600 to-electric-500 text-white p-6 rounded-2xl shadow-xl">
+                <p className="text-2xl font-bold mb-2">3 weeks. Cutting-edge AI tools.</p>
+                <p className="text-xl">A real product and a real pitch.</p>
+              </div>
+
+              <p className="text-xl text-gray-700 font-semibold">
+                For ambitious high schoolers ready to build something that matters.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                Register Now
+              </Link>
+              <Link
+                href="/coaches"
+                className="inline-block text-center border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
+              >
+                Meet Our Coaches
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why This Matters Now */}
-      <Section gradient className="bg-primary-50">
+      {/* Summer Sessions */}
+      <Section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-6">
-              Why This Matters <span className="text-gradient">Now</span>
-            </h2>
-            <p className="text-xl text-gray-600 text-center mb-12 leading-relaxed">
-              AI is changing education and the workforce rapidly. Traditional
-              pathways are no longer enough.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="font-display font-bold text-2xl mb-3 text-primary-700">
-                  The Challenge
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Many students, graduates, and early-career professionals feel
-                  uncertain about how to adapt to AI-driven changes in hiring
-                  and work. Computer science students and software engineers
-                  face increasing pressure.
-                </p>
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-center mb-12">
+            📅 <span className="text-gradient">Summer Sessions</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {summerSessions.map((session, index) => (
+              <div
+                key={session.session}
+                className="bg-gradient-to-br from-primary-50 to-electric-50 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg transition-all animate-slide-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="text-2xl font-bold text-primary-700 mb-2">
+                  {session.session}
+                </div>
+                <div className="text-lg text-gray-700 font-semibold">{session.dates}</div>
               </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow">
-                <div className="text-4xl mb-4">✨</div>
-                <h3 className="font-display font-bold text-2xl mb-3 text-primary-700">
-                  Our Response
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Practical education, community, and entrepreneurship. We help
-                  learners develop AI fluency, build real projects, and create
-                  new career and entrepreneurship pathways.
-                </p>
-              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-xl text-gray-600 mb-4">💰 Tuition</p>
+            <div className="inline-block bg-gradient-to-r from-primary-600 to-electric-500 text-white px-8 py-4 rounded-lg shadow-xl">
+              <p className="text-2xl font-bold mb-2">$3000 per 3-week session</p>
+              <p className="text-lg">Early bird discount: SAVE $500</p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* How We Help */}
-      <Section className="bg-white" pattern>
+      {/* What Students Will Learn */}
+      <Section className="bg-gradient-to-br from-primary-50 via-white to-electric-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-              How We <span className="text-gradient">Help</span>
+              💡 The 3-Week <span className="text-gradient">Journey</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Instead of fearing AI, learn to use it to become more capable,
-              more creative, and more entrepreneurial.
+              From idea to launch, you'll build a real company in just 3 weeks
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {summerHighlights.map((week, index) => (
               <div
-                key={feature.title}
-                className="relative group animate-slide-up"
+                key={week.title}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border-2 border-primary-100 hover:border-primary-300 animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-white border-2 border-primary-100 p-8 rounded-2xl hover:border-primary-400 hover:shadow-xl transition-all duration-300 h-full">
-                  <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="font-display font-bold text-xl mb-3 text-primary-700">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
+                <div className="flex items-center mb-4">
+                  <div className="text-5xl mr-4">{week.icon}</div>
+                  <div>
+                    <h3 className="font-display font-bold text-2xl text-primary-700">
+                      {week.title}
+                    </h3>
+                    <p className="text-lg text-gray-600 font-semibold">{week.subtitle}</p>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-400/0 to-electric-400/0 group-hover:from-primary-400/5 group-hover:to-electric-400/5 rounded-2xl transition-all duration-300 -z-10"></div>
+                <ul className="space-y-2">
+                  {week.points.map((point, idx) => (
+                    <li key={idx} className="flex items-start text-gray-700">
+                      <span className="text-electric-500 mr-2 mt-1">•</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* Mission Section */}
-      <Section className="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
+      {/* Why Join */}
+      <Section className="bg-white" pattern>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Our Mission
+          <div className="text-center mb-16">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
+              🔥 Why <span className="text-gradient">Join?</span>
             </h2>
-            <p className="text-2xl text-primary-100 leading-relaxed mb-8">
-              Blue Venture Hacks helps young people turn AI disruption into
-              opportunity.
-            </p>
-            <p className="text-xl text-primary-200 leading-relaxed">
-              We do this by teaching practical AI skills, running workshops and
-              summer programs, organizing hackathons, and helping students
-              launch one-person company ideas powered by AI.
-            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
+              {whyJoin.map((reason, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-primary-50 to-electric-50 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg transition-all animate-slide-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex items-start">
+                    <span className="text-2xl text-electric-500 mr-3">✓</span>
+                    <p className="text-lg text-gray-700 font-semibold">{reason}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white p-8 rounded-2xl shadow-2xl">
+              <p className="text-2xl font-bold mb-4">📩 Limited spots available.</p>
+              <p className="text-lg">
+                Perfect for students who want to get ahead in AI, coding, entrepreneurship, and future careers.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
 
-      {/* Success Pathway */}
-      <Section className="bg-white">
+      {/* Meet Our Coaches */}
+      <Section className="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-16">
-            Your Path to <span className="text-gradient">Success</span>
-          </h2>
-
-          <div className="relative">
-            {/* Connection line */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 via-electric-400 to-teal-400 transform -translate-y-1/2"></div>
-
-            <div className="grid md:grid-cols-3 gap-12 relative">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 text-white rounded-full text-3xl font-bold mb-6 shadow-xl">
-                  1
-                </div>
-                <h3 className="font-display font-bold text-2xl mb-4 text-primary-700">
-                  Learn
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Join our workshops, seminars, and summer programs to build
-                  practical AI skills.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-electric-500 to-electric-600 text-white rounded-full text-3xl font-bold mb-6 shadow-xl">
-                  2
-                </div>
-                <h3 className="font-display font-bold text-2xl mb-4 text-primary-700">
-                  Build
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Participate in hackathons and build projects that demonstrate
-                  your new capabilities.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-full text-3xl font-bold mb-6 shadow-xl">
-                  3
-                </div>
-                <h3 className="font-display font-bold text-2xl mb-4 text-primary-700">
-                  Launch
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Create your own one-person company or apply your skills to
-                  exciting career opportunities.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+              Learn From Expert Coaches
+            </h2>
+            <p className="text-2xl text-primary-100 leading-relaxed mb-8">
+              Our experienced coaches bring real-world expertise from leading tech companies and startups.
+            </p>
+            <Link
+              href="/coaches"
+              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-xl"
+            >
+              Meet Our Coaching Staff
+            </Link>
           </div>
         </div>
       </Section>
 
       {/* Final CTA */}
       <CTABanner
-        title="Ready to Build Your Future With AI?"
-        description="Learn practical AI skills, build real projects, and take control of your career in the age of AI."
-        primaryButton={{ text: "Get Started Today", href: "/ai-workshop-spring-2026#register" }}
+        title="Ready to Transform Your Summer?"
+        description="Limited spots available. Register now and save $500 with early bird discount!"
+        primaryButton={{ text: "Register Now", href: "/contact" }}
         secondaryButton={{ text: "Learn More", href: "/about" }}
       />
     </>
