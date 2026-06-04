@@ -38,11 +38,11 @@ const coaches = [
     icon: "🚀",
   },
   {
-    name: "Chen Gao",
-    linkedin: "https://www.linkedin.com/in/chen-gao-9881491b6/",
-    bio: "Technology professional with hands-on experience in modern software development and AI tools.",
-    expertise: ["Software Engineering", "AI Tools", "Practical Development"],
-    icon: "⚡",
+    name: "Jingwen Wang",
+    linkedin: "https://www.linkedin.com/in/jingwen-wang-a2904b98/",
+    bio: "Senior Architect at Apple leading large-scale data and ML platforms powering billions of email campaigns daily, with deep experience in GenAI guardrails, real-time analytics, and trust & safety systems.",
+    expertise: ["AI/ML Systems", "Big Data Architecture", "GenAI Guardrails"],
+    icon: "🏗️",
   },
 ];
 
