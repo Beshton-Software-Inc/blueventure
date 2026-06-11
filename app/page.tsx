@@ -48,12 +48,35 @@ const summerSessions = [
 ];
 
 const whyJoin = [
-  "Build a real company you own",
-  "Master cutting-edge AI tools",
-  "Create a standout college application story",
-  "Get hands-on mentorship from industry experts",
-  "Launch a portfolio-worthy product",
-  "Network with ambitious peers"
+  {
+    title: "Learn by building",
+    description: "Students work on hands-on coding, AI, and product challenges.",
+  },
+  {
+    title: "Explore real software tools",
+    description:
+      "Camp topics include Python, web applications, APIs, cloud computing, SaaS, hardware, and business fundamentals.",
+  },
+  {
+    title: "Get mentor guidance",
+    description:
+      "Coaches help students turn early ideas into clearer project concepts, prototypes, and presentations.",
+  },
+  {
+    title: "Practice startup thinking",
+    description:
+      "Students learn how to identify problems, shape product ideas, and explain their solutions.",
+  },
+  {
+    title: "Create something presentable",
+    description:
+      "By the end of the program, students work toward a project or pitch they can share with others.",
+  },
+  {
+    title: "Meet motivated peers",
+    description:
+      "Students collaborate with others who are curious about technology, AI, and entrepreneurship.",
+  },
 ];
 
 const stats = [
@@ -111,7 +134,8 @@ export default function Home() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-electric-500 px-8 py-5 text-xl font-bold text-white border-4 border-electric-200 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              style={{ borderColor: "rgb(186, 231, 252)" }}
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-electric-500 px-8 py-5 text-xl font-bold text-white border-4 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               Register Now
             </a>
@@ -201,35 +225,50 @@ export default function Home() {
       </Section>
 
       {/* Why Join */}
-      <Section className="bg-white" pattern>
+      <Section className="bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-              🔥 Why <span className="text-gradient">Join?</span>
-            </h2>
-          </div>
+          {/* Blob container */}
+          <div className="relative">
+            {/* Blob background shape */}
+            <div
+              className="absolute inset-0 -mx-8 md:-mx-20"
+              style={{
+                background: "#deeaf7",
+                borderRadius: "50% 50% 50% 50% / 40% 40% 40% 40%",
+                transform: "scaleX(1.15)",
+              }}
+            />
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {whyJoin.map((reason, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-primary-50 to-electric-50 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg transition-all animate-slide-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex items-start">
-                    <span className="text-2xl text-electric-500 mr-3">✓</span>
-                    <p className="text-lg text-gray-700 font-semibold">{reason}</p>
+            <div className="relative z-10 py-16 px-4 sm:px-8 md:px-16 max-w-3xl mx-auto">
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-center mb-12 text-primary-700">
+                Why <span className="text-gradient">Join?</span>
+              </h2>
+
+              <div className="space-y-7">
+                {whyJoin.map((item, index) => (
+                  <div key={index} className="flex items-start gap-4 animate-slide-up" style={{ animationDelay: `${index * 80}ms` }}>
+                    {/* Bullet circle */}
+                    <div
+                      className="bg-gradient-to-br from-primary-600 to-electric-500 mt-1 flex-shrink-0 w-5 h-5 rounded-full"
+                    />
+                    <div>
+                      <p className="font-bold text-gray-900 text-lg leading-snug">{item.title}</p>
+                      <p className="text-gray-600 mt-0.5 leading-relaxed">{item.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            <div className="mt-12 text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white p-8 rounded-2xl shadow-2xl">
-              <p className="text-2xl font-bold mb-4">📩 Limited spots available.</p>
-              <p className="text-lg">
-                Perfect for students who want to get ahead in AI, coding, entrepreneurship, and future careers.
-              </p>
+              {/* CTA card */}
+              <div
+                className="bg-gradient-to-r from-primary-600 to-electric-500 mt-12 rounded-2xl p-7 text-white text-center drop-shadow-[0_15px_15px_rgba(0,10,20,0.25)]"
+              >
+                <p className="text-xl font-bold mb-2">Limited Spots Available.</p>
+                <p className="text-base text-blue-100 leading-relaxed">
+                  <span className="font-semibold text-white">Session #1 begins June 15.</span>{" "}
+                  Students will explore AI, coding, cloud tools, and startup thinking through hands-on lessons and guided project work.
+                </p>
+              </div>
             </div>
           </div>
         </div>
