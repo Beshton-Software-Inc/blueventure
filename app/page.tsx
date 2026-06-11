@@ -107,12 +107,14 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-5">
-            <Link
-              href="/contact"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-electric-500 px-8 py-5 text-xl font-bold text-white border-4 border-electric-200 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               Register Now
-            </Link>
+            </a>
 
             <Link
               href="/coaches"
@@ -317,7 +319,7 @@ export default function Home() {
       <CTABanner
         title="Ready to Transform Your Summer?"
         description="Limited spots available. Register now and save $500 with early bird discount!"
-        primaryButton={{ text: "Register Now", href: "/contact" }}
+        primaryButton={{ text: "Register Now", href: "https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform" }}
         secondaryButton={{ text: "Learn More", href: "/about" }}
       />
     </>

@@ -45,19 +45,41 @@ export default function CTABanner({
           </p>
         )}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            href={primaryButton.href}
-            className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-xl"
-          >
-            {primaryButton.text}
-          </Link>
-          {secondaryButton && (
-            <Link
-              href={secondaryButton.href}
-              className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-700 transition-all duration-300"
+          {primaryButton.href.startsWith("http") ? (
+            <a
+              href={primaryButton.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-xl"
             >
-              {secondaryButton.text}
+              {primaryButton.text}
+            </a>
+          ) : (
+            <Link
+              href={primaryButton.href}
+              className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300 shadow-xl"
+            >
+              {primaryButton.text}
             </Link>
+          )}
+          {secondaryButton && (
+            secondaryButton.href.startsWith("http") ? (
+              <a
+                href={secondaryButton.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-700 transition-all duration-300"
+              >
+                {secondaryButton.text}
+              </a>
+            ) : (
+              <Link
+                href={secondaryButton.href}
+                className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary-700 transition-all duration-300"
+              >
+                {secondaryButton.text}
+              </Link>
+            )
           )}
         </div>
       </div>
