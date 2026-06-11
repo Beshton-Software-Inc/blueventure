@@ -127,67 +127,7 @@ export default function Home() {
       </div>
     </section>
       
-      {/* Original Hero Section - Summer Programs 
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-electric-50">
-
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-electric-400/20 rounded-full filter blur-3xl animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-teal-400/20 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full dot-pattern opacity-40"></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="text-left space-y-8 animate-fade-in">
-            <div className="inline-block">
-              <span className="bg-gradient-to-r from-primary-600 to-electric-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                Summer 2026 • AI & Software Engineering Camp
-              </span>
-            </div>
-
-            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
-              Summer 2026 AI & Software Engineering Camp
-            </h1>
-            
-            <div className="max-w-4xl mx-auto space-y-6">
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border-2 border-primary-200">
-                <h2 className="text-3xl font-bold text-primary-700 mb-4">You'll leave with a company</h2>
-                <p className="text-xl text-gray-700 mb-2">not just a certificate.</p>
-                <div className="space-y-2 text-lg text-gray-600">
-                  <p className="font-semibold">Built by you.</p>
-                  <p className="font-semibold">Owned by you.</p>
-                  <p className="font-semibold text-primary-600">The story every college app is missing.</p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-primary-600 to-electric-500 text-white p-6 rounded-2xl shadow-xl">
-                <p className="text-2xl font-bold mb-2">3 weeks. Cutting-edge AI tools.</p>
-                <p className="text-xl">A real product and a real pitch.</p>
-              </div>
-
-              <p className="text-xl text-gray-700 font-semibold">
-                For ambitious high schoolers ready to build something that matters.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-block text-center bg-gradient-to-r from-primary-600 to-electric-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                Register Now
-              </Link>
-              <Link
-                href="/coaches"
-                className="inline-block text-center border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-600 hover:text-white transition-all duration-300"
-              >
-                Meet Our Coaches
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
-
+      
       {/* Summer Sessions */}
       <Section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
