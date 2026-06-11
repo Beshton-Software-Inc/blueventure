@@ -66,9 +66,68 @@ const stats = [
 export default function Home() {
   return (
     <>
-      {/* Hero Section - Summer Programs */}
+      {/* New Hero Section */}
+      <section
+          className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/images/hero-image.png')",
+          }}
+      >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/65" />
+
+      {/* Subtle blue tint to match the site branding */}
+      <div className="absolute inset-0 bg-primary-900/25" />
+
+      <div className="relative z-10 mx-auto max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-28">
+        <div className="max-w-2xl text-white animate-fade-in">
+          <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight">
+            Summer 2026
+            <br />
+            AI &amp; Software
+            <br />
+            Engineering Camp
+          </h1>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-primary-700">
+              UPCOMING PROGRAM
+            </span>
+            <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-primary-700">
+              AI
+            </span>
+            <span className="rounded-full bg-white px-5 py-2 text-sm font-bold text-primary-700">
+              Software Engineering
+            </span>
+          </div>
+
+          <p className="mt-7 max-w-xl text-lg md:text-xl font-semibold leading-relaxed text-white">
+            A hands-on 3-week summer camp where students learn coding, AI tools, and startup
+            thinking by building real projects with experienced mentors.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-5">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-primary-600 to-electric-500 px-8 py-5 text-xl font-bold text-white border-4 border-electric-200 shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              Register Now
+            </Link>
+
+            <Link
+              href="/coaches"
+              className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-5 text-xl font-bold text-primary-700 border-4 border-primary-600 shadow-lg hover:bg-primary-50 hover:scale-105 transition-all duration-300"
+            >
+              Meet Our Coaches
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+      
+      {/* Original Hero Section - Summer Programs 
       <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-electric-50">
-        {/* Decorative background */}
+
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-electric-400/20 rounded-full filter blur-3xl animate-float"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-teal-400/20 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
@@ -76,7 +135,7 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="text-center space-y-8 animate-fade-in">
+          <div className="text-left space-y-8 animate-fade-in">
             <div className="inline-block">
               <span className="bg-gradient-to-r from-primary-600 to-electric-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Summer 2026 • AI & Software Engineering Camp
@@ -84,9 +143,9 @@ export default function Home() {
             </div>
 
             <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto">
-              🚀 WHAT TO DO THIS SUMMER?
+              Summer 2026 AI & Software Engineering Camp
             </h1>
-
+            
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-xl border-2 border-primary-200">
                 <h2 className="text-3xl font-bold text-primary-700 mb-4">You'll leave with a company</h2>
@@ -125,6 +184,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Summer Sessions */}
       <Section className="bg-white">
