@@ -7,42 +7,42 @@ const coaches = [
     linkedin: "https://www.linkedin.com/in/davewang/",
     bio: "Experienced technology leader with deep expertise in software engineering and AI.",
     expertise: ["Software Engineering", "AI Strategy", "Technical Leadership"],
-    icon: "👨‍💼",
+    photo: "/images/coach-photos/dave-wang.png",
   },
   {
-    name: "Digital Excellence Expert",
+    name: "Simon Linwood",
     linkedin: "https://www.linkedin.com/in/digitalexcellence/",
     bio: "Specialist in digital transformation and modern software development practices.",
     expertise: ["Digital Transformation", "Software Development", "Innovation"],
-    icon: "💻",
+    photo: "/images/coach-photos/simon-linwood.png",
   },
   {
     name: "Jenny Chen",
     linkedin: "https://www.linkedin.com/in/jennychenbo/",
     bio: "Expert in business operations and technology integration with a focus on practical applications.",
     expertise: ["Business Operations", "Technology Integration", "Project Management"],
-    icon: "🎯",
+    photo: "/images/coach-photos/jenny-chen.png",
   },
   {
     name: "Dr. Tao Hong",
     linkedin: "https://www.linkedin.com/in/tao-hong-phd/",
     bio: "PhD with extensive research and teaching experience in computer science and AI.",
     expertise: ["Computer Science", "AI Research", "Academic Mentorship"],
-    icon: "🎓",
+    photo: "/images/coach-photos/tao-hong.png",
   },
   {
     name: "Samuel Wei",
     linkedin: "https://www.linkedin.com/in/samuel-wei-20a59a2a2/",
     bio: "Software engineer passionate about teaching the next generation of developers.",
     expertise: ["Software Development", "Coding Education", "Mentorship"],
-    icon: "🚀",
+    photo: "/images/coach-photos/samuel-wei.png",
   },
   {
     name: "Jingwen Wang",
     linkedin: "https://www.linkedin.com/in/jingwen-wang-a2904b98/",
     bio: "Senior Architect at Apple leading large-scale data and ML platforms powering billions of email campaigns daily, with deep experience in GenAI guardrails, real-time analytics, and trust & safety systems.",
     expertise: ["AI/ML Systems", "Big Data Architecture", "GenAI Guardrails"],
-    icon: "🏗️",
+    photo: "/images/coach-photos/jingwen-wang.png",
   },
 ];
 
@@ -85,9 +85,11 @@ export default function Coaches() {
                 className="bg-white border-2 border-primary-100 rounded-2xl overflow-hidden hover:border-primary-400 hover:shadow-2xl transition-all duration-300 animate-slide-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="bg-gradient-to-br from-primary-500 via-electric-500 to-teal-500 p-8 text-center">
-                  <div className="text-7xl mb-4">{coach.icon}</div>
-                  <h3 className="font-display font-bold text-2xl text-white">
+                <div className="p-6 space-y-4 flex flex-col items-center w-full justify-center bg-gradient-to-br from-primary-500 via-electric-500 to-teal-500 p-8 text-center">
+                  <img className ="justify-center text-center flex items-center w-2/3 rounded-full" 
+                    src={coach.photo}
+                  />
+                  <h3 className="justify-center text-center flex items-center font-display font-bold text-2xl text-white">
                     {coach.name}
                   </h3>
                 </div>
