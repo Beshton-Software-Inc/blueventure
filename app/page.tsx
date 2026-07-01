@@ -44,7 +44,7 @@ const summerHighlights = [
 const summerSessions = [
   { session: "Session #1", dates: "June 15 - July 3" },
   { session: "Session #2", dates: "July 6 - July 24" },
-  { session: "Session #3", dates: "July 20 - August 7" },
+  { session: "Session #3", dates: "July 25 - August 5" },
 ];
 
 const whyJoin = [

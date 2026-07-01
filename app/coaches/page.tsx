@@ -44,6 +44,27 @@ const coaches = [
     expertise: ["AI/ML Systems", "Big Data Architecture", "GenAI Guardrails"],
     photo: "/images/coach-photos/jingwen-wang.png",
   },
+  {
+    name: "Tony Huang",
+    linkedin: "https://www.linkedin.com/in/tony-huang-287b00/",
+    bio: "Experienced technology professional dedicated to mentoring the next generation of innovators.",
+    expertise: ["Software Engineering", "Technical Leadership", "Mentorship"],
+    photo: "/images/coach-photos/tony-huang.png",
+  },
+  {
+    name: "Lihang Ying",
+    linkedin: "https://www.linkedin.com/in/lihang/",
+    bio: "Experienced technology professional dedicated to mentoring the next generation of innovators.",
+    expertise: ["Software Engineering", "Technical Leadership", "Mentorship"],
+    photo: "/images/coach-photos/lihang-ying.png",
+  },
+  {
+    name: "Shu Lu",
+    linkedin: "https://www.linkedin.com/in/shu-lu-bb338a5/",
+    bio: "Experienced technology professional dedicated to mentoring the next generation of innovators.",
+    expertise: ["Software Engineering", "Technical Leadership", "Mentorship"],
+    photo: "/images/coach-photos/shu-lu.png",
+  },
 ];
 
 export default function Coaches() {
