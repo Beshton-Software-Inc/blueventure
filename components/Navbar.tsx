@@ -37,9 +37,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-electric-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-display font-bold text-xl">B</span>
-            </div>
+            <img src="/images/bvh-icon.svg" alt="Blue Venture Hacks" className="w-10 h-10" />
             <span className="font-display font-bold text-xl text-primary-700">
               Blue Venture Hacks
             </span>
