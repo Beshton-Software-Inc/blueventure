@@ -42,10 +42,34 @@ const summerHighlights = [
 ];
 
 const summerSessions = [
-  { session: "Session #1", dates: "June 15 - July 3" },
-  { session: "Session #2", dates: "July 6 - July 24" },
-  { session: "Session #3", dates: "July 25 - August 5" },
+  {
+    session: "Session #1",
+    dates: "June 15 - July 3",
+    start: new Date(2026, 5, 15),
+    end: new Date(2026, 6, 3),
+  },
+  {
+    session: "Session #2",
+    dates: "July 6 - July 24",
+    start: new Date(2026, 6, 5),
+    end: new Date(2026, 6, 24),
+  },
+  {
+    session: "Session #3",
+    dates: "July 25 - August 5",
+    start: new Date(2026, 6, 25),
+    end: new Date(2026, 7, 5),
+  },
 ];
+
+type SessionStatus = "past" | "current" | "upcoming";
+
+function getSessionStatus(start: Date, end: Date): SessionStatus {
+  const now = new Date();
+  if (now > end) return "past";
+  if (now >= start) return "current";
+  return "upcoming";
+}
 
 const whyJoin = [
   {
@@ -93,7 +117,7 @@ export default function Home() {
       <section
           className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero-image.png')",
+            backgroundImage: "url('/images/hero-image.jpg')",
           }}
       >
       {/* Dark overlay for readability */}
@@ -159,18 +183,91 @@ export default function Home() {
             📅 <span className="text-gradient">Summer Sessions</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {summerSessions.map((session, index) => (
-              <div
-                key={session.session}
-                className="bg-gradient-to-br from-primary-50 to-electric-50 p-6 rounded-xl border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg transition-all animate-slide-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-2xl font-bold text-primary-700 mb-2">
-                  {session.session}
+            {summerSessions.map((session, index) => {
+              const status = getSessionStatus(session.start, session.end);
+
+              const cardStyles: Record<SessionStatus, string> = {
+                past: "bg-white border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg",
+                current:
+                  "bg-gradient-to-br from-primary-600 to-electric-500 border-2 border-primary-700 shadow-xl hover:shadow-2xl scale-[1.02]",
+                upcoming:
+                  "bg-gradient-to-br from-primary-50 to-electric-50 border-2 border-primary-200 hover:border-primary-400 hover:shadow-lg",
+              };
+
+              const titleStyles: Record<SessionStatus, string> = {
+                past: "text-gray-500",
+                current: "text-white",
+                upcoming: "text-primary-700",
+              };
+
+              const datesStyles: Record<SessionStatus, string> = {
+                past: "text-gray-500",
+                current: "text-primary-50",
+                upcoming: "text-gray-700",
+              };
+
+              const linkStyles: Record<SessionStatus, string> = {
+                past: "text-primary-600 hover:text-primary-700",
+                current: "text-white hover:text-primary-50",
+                upcoming: "text-primary-600 hover:text-primary-700",
+              };
+
+              return (
+                <div
+                  key={session.session}
+                  className={`p-6 rounded-xl transition-all animate-slide-up ${cardStyles[status]}`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className={`text-2xl font-bold mb-2 ${titleStyles[status]}`}>
+                    {session.session}
+                  </div>
+                  <div className={`text-lg font-semibold mb-4 ${datesStyles[status]}`}>
+                    {session.dates}
+                  </div>
+
+                  {status === "past" && (
+                    <>
+                      <div className="flex items-center gap-2 text-gray-600 font-semibold mb-3">
+                        <span className="text-xl">🖼️</span>
+                        <span>Recap Available</span>
+                      </div>
+                      <Link href="/session-1-recap" className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}>
+                        View Photos <span aria-hidden="true">→</span>
+                      </Link>
+                    </>
+                  )}
+
+                  {status === "current" && (
+                    <>
+                      <div className="flex items-center gap-2 font-bold text-white mb-3">
+                        <span className="inline-block w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                        <span>In progress</span>
+                      </div>
+                      {/*<a href="#" className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}>
+                        View session details <span aria-hidden="true">→</span>
+                      </a>*/}
+                    </>
+                  )}
+
+                  {status === "upcoming" && (
+                    <>
+                      <div className="flex items-center gap-2 text-gray-700 font-semibold mb-3">
+                        <span className="text-xl">📅</span>
+                        <span>Upcoming</span>
+                      </div>
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}
+                      >
+                        Register now <span aria-hidden="true">→</span>
+                      </a>
+                    </>
+                  )}
                 </div>
-                <div className="text-lg text-gray-700 font-semibold">{session.dates}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="text-center mt-8">
             <p className="text-xl text-gray-600 mb-4">💰 Tuition</p>
