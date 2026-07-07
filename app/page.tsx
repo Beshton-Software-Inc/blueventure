@@ -117,7 +117,7 @@ export default function Home() {
       <section
           className="relative min-h-screen flex items-center overflow-hidden bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/hero-image.png')",
+            backgroundImage: "url('/images/hero-image.jpg')",
           }}
       >
       {/* Dark overlay for readability */}
@@ -231,9 +231,9 @@ export default function Home() {
                         <span className="text-xl">🖼️</span>
                         <span>Recap Available</span>
                       </div>
-                      <a href="#" className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}>
+                      <Link href="/session-1-recap" className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}>
                         View Photos <span aria-hidden="true">→</span>
-                      </a>
+                      </Link>
                     </>
                   )}
 
