@@ -132,6 +132,46 @@ export default function Programs() {
         </div>
       </section>
 
+      {/* How to Join */}
+      <Section className="bg-gradient-to-br from-primary-50 via-white to-electric-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
+            How to <span className="text-gradient">Join</span>
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            Programs are offered throughout the year. Some are open enrollment,
+            while others require application.
+          </p>
+          <p className="text-lg text-gray-600 mb-12 leading-relaxed">
+            Programs are offered throughout the year. Check out our current
+            workshop or contact us to learn about upcoming offerings.
+          </p>
+
+          <div className="bg-gradient-to-br from-primary-700 to-electric-600 text-white p-10 rounded-3xl shadow-2xl">
+            <h3 className="font-display font-bold text-2xl mb-4">
+              Interested in a program?
+            </h3>
+            <p className="text-primary-100 mb-6">
+              Express your interest and we'll notify you when enrollment opens.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/ai-workshop-spring-2026#register"
+                className="inline-block bg-white text-primary-700 px-8 py-4 rounded-lg font-bold hover:bg-primary-50 transition-colors"
+              >
+                Register Now
+              </a>
+              <a
+                href="/contact"
+                className="inline-block border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary-700 transition-colors"
+              >
+                Get in Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Featured: Upcoming Workshop */}
       <Section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
