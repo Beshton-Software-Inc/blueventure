@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Section from "@/components/Section";
 import CTABanner from "@/components/CTABanner";
+import { lumaLinks } from "@/lib/links";
+
+const googleFormRegisterLink =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform";
 
 const summerHighlights = [
   {
@@ -47,18 +51,22 @@ const summerSessions = [
     dates: "June 15 - July 3",
     start: new Date(2026, 5, 15),
     end: new Date(2026, 6, 3),
+    registerLink: googleFormRegisterLink,
   },
   {
     session: "Session #2",
     dates: "July 6 - July 24",
     start: new Date(2026, 6, 5),
     end: new Date(2026, 6, 24),
+    registerLink: googleFormRegisterLink,
   },
   {
     session: "Session #3",
     dates: "July 27 - July 31",
     start: new Date(2026, 6, 27),
     end: new Date(2026, 6, 31),
+    // Sponsored by the Tsinghua Alumni Association, registered via Luma
+    registerLink: lumaLinks.session3,
   },
 ];
 
@@ -256,7 +264,7 @@ export default function Home() {
                         <span>Upcoming</span>
                       </div>
                       <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdlqpxb_muRYlxyV8FBH6Kj_PBOj5wJRLWztdWZ5yDRCAY5pw/viewform"
+                        href={session.registerLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`inline-flex items-center gap-1 font-semibold underline ${linkStyles[status]}`}
