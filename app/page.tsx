@@ -56,9 +56,9 @@ const summerSessions = [
   },
   {
     session: "Session #3",
-    dates: "July 25 - August 5",
-    start: new Date(2026, 6, 25),
-    end: new Date(2026, 7, 5),
+    dates: "July 27 - July 31",
+    start: new Date(2026, 6, 27),
+    end: new Date(2026, 6, 31),
   },
 ];
 
